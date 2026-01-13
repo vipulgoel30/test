@@ -1,0 +1,19 @@
+include components/components
+
+doctype html
+html(lang="en")
+  head
+    include header
+    block head
+
+  body(class="bg-slate-50 text-slate-800 min-h-screen flex flex-col")
+  
+    include components/loader
+    include components/modal
+    include components/navbar
+
+    main(class="flex-1")
+      block content
+
+    include footer
+    block footer

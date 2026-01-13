@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.toast {
+    width: 25vw;
+    max-width: 30vw;
+    overflow-wrap: normal;
+}

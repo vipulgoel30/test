@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  div(class="flex items-center justify-center py-20 px-6")
+    div(class="w-full max-w-md")
+
+      //- Login Card
+      div(class="bg-white border border-slate-200 rounded-xl shadow-lg px-8 py-10")
+
+        //- Logo
+        div(class="flex items-center justify-center mb-6")
+          div(class="h-12 w-12 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-semibold") T
+
+        //- Heading
+        h1(class="text-2xl font-semibold text-slate-800 text-center mb-2") Log in to your account
+        p(class="text-sm text-slate-500 text-center mb-8") Welcome back, please enter your details
+
+        //- Login Form
+        form(method="POST" action="/login" class="space-y-6")
+
+          //- Email
+          div(class="space-y-2")
+            label(for="email" class="block text-sm font-medium text-slate-700") Email address
+            input(
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+              class="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-600"
+            )
+
+          //- Password
+          div(class="space-y-2")
+            label(for="password" class="block text-sm font-medium text-slate-700") Password
+            input(
+              id="password"
+              name="password"
+              type="password"
+              required
+              autocomplete="current-password"
+              placeholder="••••••••"
+              class="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-600"
+            )
+
+          //- Actions
+          div(class="flex justify-end text-sm")
+            a(href="/forgot-password" class="text-blue-600 hover:underline") Forgot password?
+
+          //- Submit
+          button(
+            type="submit"
+            class="w-full rounded-xl bg-blue-600 text-white py-3 font-medium hover:bg-blue-700 transition shadow-sm"
+          ) Log in
+
+        //- Footer Links
+        p(class="mt-8 text-center text-sm text-slate-500")
+          span Don’t have an account?
+          a(href="/signup" class="ml-1 text-blue-600 hover:underline") Sign up

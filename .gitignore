@@ -1,0 +1,6 @@
+log
+node_modules
+user.db
+.env*
+dist
+tailwind.config.js

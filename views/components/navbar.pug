@@ -1,0 +1,32 @@
+nav(class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200")
+  div(class="max-w-7xl mx-auto px-6")
+    div(class="h-16 flex items-center justify-between")
+
+      a(href="/" class="flex items-center gap-3")
+        div(class="h-9 w-9 rounded-lg bg-blue-600 text-white flex items-center justify-center font-semibold") B
+        span(class="text-lg font-semibold text-slate-800 tracking-tight") BlueMist
+
+      div(class="flex items-center gap-6")
+
+        div(class="hidden md:flex items-center gap-6")
+          a(href="/features" class="text-slate-600 hover:text-blue-600 transition") Features
+          a(href="/docs" class="text-slate-600 hover:text-blue-600 transition") Docs
+          a(href="/pricing" class="text-slate-600 hover:text-blue-600 transition") Pricing
+
+        if !username
+          a(href="/login" class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition shadow-sm") Login
+
+        else
+          button(
+            type="button"
+            id="profileDropdownButton"
+            data-dropdown-toggle="profileDropdown"
+            class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-semibold hover:bg-blue-700 transition"
+          ) #{username.slice(0, 2).toUpperCase()}
+
+          div(id="profileDropdown" class="hidden z-50 mt-2 w-40 bg-white rounded-xl border border-slate-200 shadow-lg")
+            ul(class="py-2 text-sm text-slate-700")
+              li
+                a(href="/profile" class="block px-4 py-2 hover:bg-slate-50 transition") Profile
+              li
+                a(href="/logout" class="block px-4 py-2 hover:bg-slate-50 transition") Logout

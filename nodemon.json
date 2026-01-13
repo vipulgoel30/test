@@ -1,0 +1,6 @@
+{
+    "watch": ["src", "public"],
+    "ignore": ["./public/css/main.css"],
+    "ext": "ts,js,json,pug,css",
+    "exec": "tsx -r dotenv/config ./src/index.ts"
+}

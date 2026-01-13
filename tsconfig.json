@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2022", "DOM"],
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "target": "ES2022",
+        "esModuleInterop": true,
+        "rootDir": "src",
+        "outDir": "dist",
+        "allowSyntheticDefaultImports": true,
+        "declaration": false,
+        "skipLibCheck": false,
+        "strict": true,
+        "typeRoots": ["./process-env.d.ts"],
+        "allowImportingTsExtensions": true,
+        "rewriteRelativeImportExtensions": true
+    },
+    "exclude": ["envs", "dist","additional"]
+}
